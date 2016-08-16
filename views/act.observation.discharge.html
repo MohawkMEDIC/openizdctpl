@@ -1,0 +1,5 @@
+﻿<div xmlns="http://www.w3.org/1999/xhtml" xmlns:oiz="http://openiz.org/applet" xmlns:binding="http://openiz.org/applet/binding">
+    <label for="discharge">{{ 'org.sample.applet.discharge' | i18n }}</label>
+    <!-- The following is an example of a static binding, which means that the host will render the value set into the select box as options when rendering -->
+    <select name="discharge" ng-model="act.actModel.value" binding:source="Concept" binding:filter="conceptSet.mnemonic=DischargeDisposition" binding:value="name[en].value"></select>
+</div>

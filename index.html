@@ -1,0 +1,30 @@
+<!--
+    This is a sample HTML file which will be rendered in the OpenIZ Disconnected Client application. 
+
+    Some things to note:
+
+    1. The default namespace should be the XHTML namespace
+    2. You should declare the http://openiz.org/applet namespace somehow (here it is as oiz:)
+    3. To use static bindings http://openiz.org/applet/binding namespace is used
+
+    Some useful tags from oiz namespace:
+
+    oiz:layout="path to layout" -> Indicates the layout in which this content should be rendered
+    oiz:script -> A path to a JavaScript file that will be included in the rendered HTML
+    oiz:style -> A path to a CSS file that will be included in the rendered HTML
+    oiz:demand -> A permission which is required to view the page or for the page to appear in the navbar.
+
+-->
+<div xmlns="http://www.w3.org/1999/xhtml" xmlns:oiz="http://openiz.org/applet" oiz:layout="/org.openiz.core/layouts/navbar.html"
+     oiz:binding="http://openiz.org/applet/binding">
+    <oiz:title lang="en">New Applet!</oiz:title>
+    <oiz:script>~/controllers/index.js</oiz:script>
+    <oiz:style>~/css/theme.css</oiz:style>
+    <oiz:demand>1.3.6.1.4.1.33349.3.1.5.9.2.1</oiz:demand>
+
+    <!-- Localized strings can be pre-rendered using this syntax -->
+    <h1>{{ 'org.sample.applet.title' | i18n }}</h1>
+
+    <!-- You can use SSI virtual includes to also include partials -->
+    <!-- #include virtual="/org.sample.applet/views/dashboard.html" -->
+</div>

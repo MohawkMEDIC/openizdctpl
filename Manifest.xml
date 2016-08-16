@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<AppletManifest xmlns="http://openiz.org/applet">
+  <!-- The INFO section is used to describe your applet:
+      @id = The identification for your applet used to differentiate it in the OpenIZ namespace
+      @version = The semantic version of the applet
+      @publicKeyToken = A UUID for your applet (optional) which is used to further distinguish the name 
+    -->
+    <info id="org.sample.applet" version="1.0.0.0">
+      <!-- The names for your applet as they appear in administrative panels -->
+      <name lang="en">Sample Applet</name>
+      <name lang="fr">Applet Example</name>
+      <!-- You may group your application into a chosen category -->
+      <groupName lang="en">Samples</groupName>
+      <!-- The author/copyright information for your applet -->
+      <author>OpenIZ Community</author>
+      <!-- Any dependencies (on other applets) -->
+      <dependency id="org.openiz.core" version="0.6.0.0"/>
+      <!-- 
+          If you want to demand a user has a special permission in order to use any of the features in the applet
+          you would use the Demand element
+          <demand></demand>
+      -->
+  </info>
+  <!-- The configuration element of the manifest allows your application to specify an initial set of configuration
+      values which are required by your application
+  -->
+  <configuration>
+    <appSetting name="my.custom.setting" value="2039"/>
+  </configuration>
+  <!-- The menuItem element is used to specify menu items that should appear in the navbar when your application 
+       is installed in the OpenIZ Disconnected Client
+  -->
+  <menuItem launch="/org.sample.applet/index.html" order="99">
+    <icon>/org.sample.applet/img/icon.png</icon>
+    <text lang="en">Sample</text>
+  </menuItem>
+  <!-- The template element is used to define clinical data templates which can be rendered by other parts of the
+       OpenIZ disconnected client. For example, if you wanted to provide an applet which can collect maternal
+       PMTCT data while registering a patient in the core OpenIZ patient view, you would do that here
+  -->
+  <template mnemonic="Act.Observation.Discharge">
+    <form>/org.sample.applet/views/act.observation.discharge.html</form>
+    <definition>/org.sample.applet/templates/act.observation.discharge.json</definition>
+    <!-- If you also want to expose a snippet of HTML that can be used to view an instance of the 
+        defined template, use the following element 
+        <view></view>
+    -->
+  </template>  
+  <!-- Use the strings element to define the localized portions of your application -->
+  <strings lang="en">
+    <string key="org.sample.applet.title">My Sample Applet!</string>
+    <string key="org.sample.applet.discharge">Discharge Disposition</string>
+  </strings>
+</AppletManifest>
+  

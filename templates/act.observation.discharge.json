@@ -1,0 +1,22 @@
+﻿// This is a sample JSON file which dictates that whenever a "discharge" observation is created
+// the model should be pre-populated with the following data
+{
+  "$type": "CodedObservation",
+  "template": {
+    "mnemonic": "Act.Observation.Discharge"
+  },
+  "moodConceptModel": { "mnemonic": "Eventoccurrence" }, // UUIDs are preferred but this is a shortcut
+  "classConcept": "28D022C6-8A8B-47C4-9E6A-2BC67308739E",
+  "actTime": "{{now}}",
+  "participation": {
+    "Performer": {
+      "player": "{{userEntityId}}"
+    },
+    "Location": {
+      "player": "{{locationId}}"
+    }
+  },
+  "typeConceptModel": {
+    "mnemonic": "DischargeDisposition"
+  }
+}
