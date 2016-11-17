@@ -1,3 +1,10 @@
 ﻿<div xmlns="http://www.w3.org/1999/xhtml" xmlns:oiz="http://openiz.org/applet">
-    <!-- Your dasboard stuff here -->
+    <!-- Your dasboard stuff here - This just shows all the patients -->
+    {{ 'org.sample.applet.total' | i18n }} : {{ results.total }}
+    <ul>
+        <li ng-repeat="patient in results.patients track by $index">
+            <!-- There are even a series of helper filters -->
+            {{$index}} - {{ patient.name.OfficialRecord | oizEntityName }}
+        </li>
+    </ul>
 </div>
