@@ -50,6 +50,7 @@
   <strings lang="en">
     <string key="org.sample.applet.title">My Sample Applet!</string>
     <string key="org.sample.applet.discharge">Discharge Disposition</string>
+    <string key="org.sample.applet.total">Total Results</string>
   </strings>
 </AppletManifest>
   

@@ -12,6 +12,8 @@ work.
 * /controllers - Javascript files which represent the AngularJS controllers
 * /css - Styles used in your application
 * /js - JavaScript that is not really a controller
+* /rules - JavaScript based business rules that must run in the UI and on the back-end IMS
+* /protocols - ProtocolXML files which define the clinical protocols in use for this particular applet.
 * /templates - IMS templates in JSON format which your applet wishes to expose
 * /views - Views and partials in your applications
 * /Manifest.xml - The manifest file which is used to identify your application's metadata
