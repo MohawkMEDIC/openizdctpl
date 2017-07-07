@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Mohawk College\OpenIZ\sdk\AppletCompiler.exe" --compile -s . -o .bin\org.sample.applet.xml
