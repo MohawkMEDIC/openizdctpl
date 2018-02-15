@@ -6,6 +6,7 @@
       @publicKeyToken = A UUID for your applet (optional) which is used to further distinguish the name 
     -->
     <info id="org.sample.applet" version="1.0.0.0">
+      <icon>/org.sample.applet/img/icon.png</icon>
       <!-- The names for your applet as they appear in administrative panels -->
       <name lang="en">Sample Applet</name>
       <name lang="fr">Applet Example</name>
