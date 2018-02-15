@@ -30,7 +30,7 @@
   <!-- The menuItem element is used to specify menu items that should appear in the navbar when your application 
        is installed in the OpenIZ Disconnected Client
   -->
-  <menuItem launch="/org.sample.applet/index.html" order="99">
+  <menuItem launch="#/" order="99">
     <icon>/org.sample.applet/img/icon.png</icon>
     <text lang="en">Sample</text>
   </menuItem>
@@ -48,9 +48,13 @@
   </template>  
   <!-- Use the strings element to define the localized portions of your application -->
   <strings lang="en">
+    <string key="locale.layout.title">My Application</string>
+    <string key="locale.layout.footer">My Application (C) 2018</string>
     <string key="org.sample.applet.title">My Sample Applet!</string>
     <string key="org.sample.applet.discharge">Discharge Disposition</string>
     <string key="org.sample.applet.total">Total Results</string>
+    <string key="org.sample.applet.search">Search Term:</string>
+    <string key="org.sample.applet.doSearch">Search!</string>
   </strings>
 </AppletManifest>
   

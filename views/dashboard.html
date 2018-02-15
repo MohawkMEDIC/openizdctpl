@@ -1,10 +1,32 @@
-﻿<div xmlns="http://www.w3.org/1999/xhtml" xmlns:oiz="http://openiz.org/applet">
+﻿<div xmlns="http://www.w3.org/1999/xhtml" xmlns:oiz="http://openiz.org/applet" class="container">
     <!-- Your dasboard stuff here - This just shows all the patients -->
-    {{ 'org.sample.applet.total' | i18n }} : {{ results.total }}
-    <ul>
-        <li ng-repeat="patient in results.patients track by $index">
+
+    <div class="row form-group">
+        <label class="col-md-2 form-label">
+            {{ 'org.sample.applet.search' | i18n }}
+        </label>
+        <div class="col-md-8">
+            <input ng-model="search.name" type="text" class="form-control" />
+        </div>
+        <div class="col-md-2 pull-right">
+            <button ng-click="searchPatients()" class="btn btn-lg">{{ 'org.sample.applet.doSearch' | i18n }}</button>
+        </div>
+    </div>
+
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>SN</th>
+            <th>Name</th>
+        </tr>
+        <tr ng-repeat="patient in results.patients track by $index">
+            <td>
+                {{$index}}
+            </td>
             <!-- There are even a series of helper filters -->
-            {{$index}} - {{ patient.name.OfficialRecord | oizEntityName }}
-        </li>
-    </ul>
+            <td>
+                {{ patient.name.OfficialRecord | oizEntityName }}
+            </td>
+        </tr>
+    </table>
+    {{ 'org.sample.applet.total' | i18n }} : {{ results.total }}
 </div>
